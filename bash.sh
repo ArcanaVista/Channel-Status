@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 TELEGRAM_BOT_TOKEN="TELEGRAM_BOT_TOKEN" 
 CHANNEL_ID="CHANNEL_ID"
 GITHUB_USERNAME="GITHUB_USERNAME"
@@ -39,7 +38,6 @@ cd "$REPO_DIR" || exit 1
 git config user.name "$GITHUB_USERNAME"
 git config user.email "$GIT_EMAIL"
 
-
 mkdir -p "$REPO_DIR/background"
 mkdir -p "$REPO_DIR/fonts"
 cp "$BG_PATH" "$REPO_DIR/background/Group 3.png"
@@ -60,43 +58,35 @@ asyncio.run(main())
 END
 )
 
-
 DATE=$(date '+📅 %Y-%m-%d %H:%M:%S')
 echo -e "$DATE\n👥 Підписників: $SUBSCRIBERS" > "$FILE_NAME"
-
 
 python3 - <<END
 from PIL import Image, ImageDraw, ImageFont
 import datetime
 
-# Загрузка исходного фона
 bg_path = "background/Group 3.png"
 font_path = "fonts/DejaVuSans-Bold.ttf"
 
 background = Image.open(bg_path).convert("RGBA")
 width, height = background.size
 
-# Подготовка текста
 timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 line1 = f"{timestamp}"
 line2 = f"Підписників: $SUBSCRIBERS"
 
-# Настройки текста
 text_color = (255, 255, 255, 255)
 font1 = ImageFont.truetype(font_path, 48)
 font2 = ImageFont.truetype(font_path, 48)
 
 draw = ImageDraw.Draw(background)
 
-# Координаты левого верхнего угла
 padding_x = 50
 padding_y = 40
 
-# Отрисовка текста
 draw.text((padding_x, padding_y), line1, font=font1, fill=text_color)
 draw.text((padding_x, padding_y + 60), line2, font=font2, fill=text_color)
 
-# Сохраняем
 background.save("$IMAGE_NAME")
 END
 
