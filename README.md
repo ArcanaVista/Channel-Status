@@ -83,7 +83,7 @@ Channel-Status/
   👥 Підписників: 2135
   ```
 - `status.png`:  
-  ![Статус](status.png)
+  ![Статус](result/status.png)
 
 ---
 
