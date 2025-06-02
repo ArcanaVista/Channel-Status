@@ -55,12 +55,12 @@ Channel-Status/
 
 ---
 
-## ⏰ Cron (запуск кожні 10 хвилин)
+## ⏰ Cron (запуск кожні 5 хвилин)
 
 Щоб запускати скрипт автоматично, додайте у cron:
 
 ```cron
-*/10 * * * * /bin/bash /home/user/Channel-Status/bash.sh >> /home/user/Channel-Status/bash.log 2>&1
+*/5 * * * * /bin/bash /home/user/Channel-Status/bash.sh >> /home/user/Channel-Status/bash.log 2>&1
 ```
 
 ---
