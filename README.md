@@ -4,6 +4,14 @@
   Keywords: telegram, телеграм, підписники, моніторинг, subscribers, channel, канал, status, github, auto, автоматизація, скрипт, bash, python, bot, бот, аналітика, банер, графіка, кількість, віджет, automation, image, pillow, aiogram, bash, cron, open source, telegram bot, python script
 -->
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ArcanaVista/Channel-Status/main/result/ChannelStatus_status.png" alt="AV Banner" width="100%" />
+</p>
+
+
+
+
+
 
 # Channel-Status
 
@@ -82,8 +90,12 @@ Channel-Status/
   📅 2025-06-02 18:30:12
   👥 Підписників: 2135
   ```
-- `status.png`:  
-  ![Статус](result/status.png)
+- `ChannelStatus_status.png`:  
+  ![Статус](result/ChannelStatus_status.png)
+
+- `TelegramLab_status.png`:  
+  ![Статус](result/TelegramLab_status.png)
+
 
 ---
 
